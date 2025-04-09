@@ -36,7 +36,7 @@ Lotus,2,45.5,31.5
 
 ## Usage
 
-1. Make sure your `teams_data.csv` file is properly formatted. **Important:** The file should not contain any comment lines at the beginning.
+1. Make sure your `teams_data.csv` file is properly formatted with no comment lines at the beginning.
 
 2. Run the script:
 
@@ -46,6 +46,26 @@ python sprint_velocity.py
 
 3. The script will generate velocity charts for each team in the dataset. Close one chart to view the next one.
 
+## Development
+
+### Code Quality
+
+This project uses Ruff for linting and formatting. To use:
+
+```bash
+# Install Ruff
+pip install ruff
+
+# Run linting
+ruff check .
+
+# Apply auto-fixes
+ruff check --fix .
+
+# Format code
+ruff format .
+```
+
 ## Customizing
 
 - To add new teams or sprints, simply update the CSV file with additional data
@@ -53,7 +73,8 @@ python sprint_velocity.py
 
 ## Requirements
 
-- Python 3.x
+- Python 3.8+
 - pandas >= 1.3.0
 - matplotlib >= 3.4.0
 - numpy >= 1.20.0
+- ruff >= 0.1.0
