@@ -1,0 +1,30 @@
+[tool.ruff]
+# Enable flake8-bugbear (`B`) rules, pycodestyle (`E`), imports (`I`), and more
+select = ["E", "F", "B", "I", "C90", "N", "UP", "ANN", "W"]
+ignore = ["ANN101"]  # Missing type annotation for `self` in method
+
+# Allow autofix for all enabled rules (when `--fix` is used)
+fixable = ["ALL"]
+
+# Exclude files and directories
+exclude = [
+    ".git",
+    ".venv",
+    "venv",
+    "__pycache__",
+    "dist",
+]
+
+# Set line length to 88 (same as black)
+line-length = 88
+
+# Target Python 3.8+
+target-version = "py38"
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
